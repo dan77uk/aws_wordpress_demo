@@ -14,5 +14,6 @@
 2. ./application layer:
 
 - Security group rules for all resources
-- AWS Relational Database Service (RDS) resource
-- AWS Secrets Manager
+- AWS Relational Database Service (RDS) resource (rds.tf)
+- AWS Secrets Manager (secrets.tf)
+- Launch configuration (ec2.tf)
