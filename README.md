@@ -17,3 +17,4 @@
 - AWS Relational Database Service (RDS) resource (rds.tf)
 - AWS Secrets Manager (secrets.tf)
 - Launch configuration (ec2.tf)
+- Presentation - load balancer, listener, asuto scaling group (presentation.tf)
