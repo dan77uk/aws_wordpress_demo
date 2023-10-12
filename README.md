@@ -18,3 +18,32 @@
 - AWS Secrets Manager (secrets.tf)
 - Launch configuration (ec2.tf)
 - Presentation - load balancer, listener, asuto scaling group (presentation.tf)
+
+#### Installation Guide
+
+This guide assumes you have Terraform installed and an AWS Profile configured with Access and Secret Access keys. Please note, this infrastructure will incur charges from AWS, for which you are responsible.
+
+Before installing, create an s3 bucket with versioning enabled in order to store the Terraform state remotely, and ensure it's name matches the 'bucket' attribute in
+
+- /network/backend.tf
+- /application/backend.tf
+
+and in the data resource in
+
+- /application/data.tf
+
+```
+bucket = "your-bucket-name"
+```
+
+Then open a terminal in the root folder and run the following commands:
+
+```bash
+# create the VPC, subnets, route tables, nat gateways and internet gateway resources
+cd ../network && terraform init
+terraform apply
+
+#create the EC2s, security groups, load balancer and auto-scaling group resources
+cd ../application && terraform init
+terraform apply
+```
