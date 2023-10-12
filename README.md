@@ -10,3 +10,9 @@
 - Two availability zones (AZs)
 - A private application subnet, a private database subnet and a public subnet in each AZ
 - Three route tables - one public which accepts traffic from and Internet Gateway, two private which accept incoming traffic from two Nat Gateways (hosted in the public subnet of each AZ)
+
+2. ./application layer:
+
+- Security group rules for all resources
+- AWS Relational Database Service (RDS) resource
+- AWS Secrets Manager
